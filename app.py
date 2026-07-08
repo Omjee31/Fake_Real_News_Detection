@@ -76,24 +76,78 @@ using **TF-IDF** and **Linear SVM**.
 # DATASET
 # ==========================================================
 
+# ==========================================================
+# DATASET
+# ==========================================================
+
+# ==========================================================
+# DATASET
+# ==========================================================
+
 elif page == "Dataset":
 
     st.title("📊 Dataset Overview")
 
-    df = pd.read_csv("data/processed_news.csv")
+    DATA_FILE = "data/processed_news.csv"
 
-    st.write("### Dataset Shape")
+    if os.path.exists(DATA_FILE):
 
-    st.write(df.shape)
+        df = pd.read_csv(DATA_FILE)
 
-    st.write("### First Five Rows")
+        # Dataset Statistics
+        col1, col2, col3 = st.columns(3)
 
-    st.dataframe(df.head())
+        col1.metric("Total News", f"{len(df):,}")
+        col2.metric("Fake News", f"{(df['label'] == 0).sum():,}")
+        col3.metric("Real News", f"{(df['label'] == 1).sum():,}")
 
-    st.write("### Class Distribution")
+        st.markdown("---")
 
-    st.bar_chart(df["label"].value_counts())
+        st.subheader("Dataset Shape")
+        st.write(df.shape)
 
+        st.subheader("First Five Rows")
+        st.dataframe(df.head(), use_container_width=True)
+
+        st.subheader("Class Distribution")
+        st.bar_chart(df["label"].value_counts())
+
+    else:
+
+        st.warning("Dataset is not included in this GitHub repository due to GitHub file size limitations.")
+
+        # Dataset Statistics
+        col1, col2, col3 = st.columns(3)
+
+        col1.metric("Total News", "44,898")
+        col2.metric("Fake News", "23,481")
+        col3.metric("Real News", "21,417")
+
+        st.markdown("---")
+
+        st.subheader("Dataset Information")
+
+        st.write("""
+**Dataset Name:** Fake and Real News Dataset
+
+**Source:** Kaggle
+
+This project was trained using the Fake and Real News Dataset containing
+44,898 news articles collected from reliable news sources and fake news websites.
+
+The dataset consists of:
+
+- 📰 **23,481 Fake News Articles**
+- 📰 **21,417 Real News Articles**
+
+**Files Used**
+
+- Fake.csv
+- True.csv
+
+The dataset is excluded from this GitHub repository because GitHub has file size limits.
+To run this project locally, download the dataset from Kaggle and place the files inside the `data/` folder before running the preprocessing pipeline.
+""")
 # ==========================================================
 # PREDICTION
 # ==========================================================
