@@ -66,18 +66,19 @@ This project is an **End-to-End Machine Learning and Natural Language Processing
 
 This project uses the **Fake and Real News Dataset** from Kaggle.
 
-📥 Dataset Link:
+## 📂 Dataset
 
-[![Dataset](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+This project uses the **Fake and Real News Dataset** from Kaggle.
 
-The dataset contains approximately:
+[![Dataset](https://img.shields.io/badge/Download-Dataset-blue?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+
+The dataset contains:
 
 - 📰 **23,481 Fake News Articles**
 - 📰 **21,417 Real News Articles**
 - 📄 **44,898 Total Articles**
 
-> **Note:** The dataset is not included in this repository due to GitHub file size limitations. But I Add A Sample File Which Helps In Understanding
-
+> **Note:** The dataset is not included in this repository due to GitHub file size limitations. Please download it from Kaggle before running the project. :contentReference[oaicite:0]{index=0}
 ---
 
 ## ⚙️ Workflow
