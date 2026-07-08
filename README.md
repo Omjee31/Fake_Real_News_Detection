@@ -68,7 +68,7 @@ This project uses the **Fake and Real News Dataset** from Kaggle.
 
 📥 Dataset Link:
 
-https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+[![Dataset](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
 
 The dataset contains approximately:
 
