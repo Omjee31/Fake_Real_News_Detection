@@ -88,7 +88,7 @@ elif page == "Dataset":
 
     st.title("📊 Dataset Overview")
 
-    DATA_FILE = "data/processed_news.csv"
+    DATA_FILE = "data/sample_processed_news.csv""
 
     if os.path.exists(DATA_FILE):
 
