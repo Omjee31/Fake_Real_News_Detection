@@ -1,0 +1,22 @@
+# Data Processing
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+
+# NLP
+nltk
+
+# Web App
+streamlit
+
+# Model Saving
+joblib
+
+# Progress Bar
+tqdm
+
+# Visualization
+matplotlib
+seaborn
